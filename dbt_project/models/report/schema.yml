@@ -1,0 +1,47 @@
+version: 2
+
+
+tmodels: 
+  - name: daily_case
+    description: "The daily request count of 311 service"
+  - name: dim_agency_daily  
+    description: "The daily request count of 311 service for each agency"
+    columns:
+      - name: agency_responsible
+        tests:
+          - not null
+  - name: dim_request_type_daily  
+    description: "The daily request count of 311 service for each service request type"
+    columns:
+      - name: service_request_type
+        tests:
+          - not null
+
+  - name:  dim_neighborhood_daily
+    description: "The daily request count of different type of 311 service for each neighborhood"
+    columns:
+      - name: service_request_type
+        tests:
+          - not null
+      - name: neighborhood
+        tests:
+          - not null
+  - name:  agency_monthly_report
+    description: "The average processing day of 311 service for each agency monthly"
+    columns:
+      - name: agency_responsible
+        tests:
+          - not null
+  - name:  service_type_monthly_report
+    description: "The average processing day of 311 service for each service_type monthly"
+    columns:
+      - name: service_request_type
+        tests:
+          - not null
+  - name:  channel_monthly_report
+    description: "The request of 311 service from each channel monthly"
+    columns:
+      - name: source
+        tests:
+          - not null
+    

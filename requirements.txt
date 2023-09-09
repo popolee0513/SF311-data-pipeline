@@ -1,0 +1,11 @@
+astronomer-cosmos
+apache-airflow-providers-google
+pyarrow
+numpy
+pandas
+protobuf
+Requests
+sodapy
+pendulum
+
+

@@ -1,0 +1,78 @@
+version: 2
+
+sources: 
+  - name: staging
+    database: sf311-396506 # database = project_id in bq
+    schema: SF311_RAW # schema = dataset in bq
+    tables: 
+      - name: staging_table
+  
+models:
+  - name: 311_record_data
+    description: data in staging layer is guaranteed to not redundant
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "updated_datetime>= requested_datetime"
+          expression: "closed_date >= requested_datetime"
+    columns:
+      - name: service_request_id
+        description: The primary key for this table
+        tests:
+          - unique:
+              severity: error
+          - not_null:
+              severity: error
+      - name: requested_datetime
+        description: The date and time when the service request was made
+        tests:
+          -  not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: timestamp
+      - name: closed_date
+        description: The date and time when the service request was closed
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: timestamp
+      - name: updated_datetime
+        description: > 
+          The date and time when the service request was last modified. 
+          For requests with status=closed, this will be the date the request was closed
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: timestamp
+      - name: status_description
+        description: A single-word indicator of the current state of the service request.
+        tests:
+        - accepted_values:
+           values: 
+            [Open, Closed]
+      - name: status_notes
+        description: >
+          Explanation of why status was changed to current state or more details 
+          on current status than conveyed with status alone
+        tests:
+        - dbt_expectations.expect_column_values_to_not_match_like_pattern_list:
+            like_pattern_list: ["%duplicate%", "%Duplicate%"]
+      - name: agency_responsible
+        description: The agency responsible for fulfilling or otherwise addressing the service request.
+      - name: service_name
+        description: The human readable name of the service request type
+      - name: service_subtype
+        description: The human readable name of the service request subtype
+      - name: service_details
+        description: The human readable name of the service request details
+      - name: address
+        description: Human readable address or description of location
+      - name: street
+        description: >
+          Primary Street of the associated address. Parks may have a park name instead of a street name. 
+          Requests not associated with an address will be blank.
+      - name: supervisor_district
+      - name: neighborhood
+      - name: police_district
+      - name: lat
+      - name: long
+      - name: source
+        description: >
+          Mechanism or path by which the service request was received; typically 
+          'Phone', 'Text/SMS', 'Website', 'Mobile App', 'Twitter, etc but terms may vary by system.	

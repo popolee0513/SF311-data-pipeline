@@ -59,11 +59,3 @@ resource "google_bigquery_dataset" "prod_dataset" {
   location   = local.region
   delete_contents_on_destroy = true
 }
-
-
-
-
-
-
-
-

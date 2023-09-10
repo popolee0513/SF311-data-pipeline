@@ -33,13 +33,13 @@ The dataset chosen for my data engineering project is derived from [SF311](https
 
 # Technologies and Tools
 For this project I decided to use the following tools:
-- Infrastructure as Code: Terraform
-- Workflow orchestration: Airflow
-- VM instance to run the whole data pipeline: Google Compute Engine
-- Data Lake: Google Cloud Storage
-- Data Warehouse: Google BigQuery
-- Data Transformation: DBT
-- Data Visualization: Google Looker Studio
+- Infrastructure as Code: *Terraform*
+- Workflow orchestration: *Airflow*
+- VM instance to run the whole data pipeline: *Google Compute Engine*
+- Data Lake: *Google Cloud Storage*
+- Data Warehouse: Google *BigQuery*
+- Data Transformation: *DBT*
+- Data Visualization: *Google Looker Studio*
 
 
   

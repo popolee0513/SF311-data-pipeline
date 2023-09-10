@@ -37,7 +37,7 @@ For this project I decided to use the following tools:
 - Workflow orchestration: *`Airflow`*
 - VM instance to run the whole data pipeline: *`Google Compute Engine`*
 - Data Lake: *`Google Cloud Storage`*
-- Data Warehouse: Google *`BigQuery`*
+- Data Warehouse: *`Google BigQuery`*
 - Data Transformation: *`DBT`*
 - Data Visualization: *`Google Looker Studio`*
 

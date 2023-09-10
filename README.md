@@ -1,6 +1,6 @@
 # End to End SF311 Data Pipeline
 
-## Project Summary: Enhancing Civic Insights with SF311 Data
+## Project Overview: Enhancing Civic Insights with SF311 Data
 
 This project is dedicated to the strategic application of Data Engineering methodologies for in-depth analysis of SF311 data, a vital civic service in San Francisco. The project's core technical objectives encompass:
 

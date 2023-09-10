@@ -21,7 +21,7 @@ The Data Warehouse architecture is meticulously designed with three essential la
 
 - **Data Aggregation and Metrics Calculation**: The core layer focuses on aggregating and analyzing the cleaned data to calculate various metrics and generate valuable insights.
 
-**Orchestration** is seamlessly managed using Apache Airflow, ensuring a smooth, automated data pipeline from data extraction to visualization.
+**Orchestration** is seamlessly managed using Apache Airflow, ensuring a smooth, automated data pipeline from data extraction to transformation.
 
 <img src="https://github.com/popolee0513/SF311-data-pipeline/raw/main/Images/architecture.JPG" alt="Data Pipeline Architecture" width="80%">
 

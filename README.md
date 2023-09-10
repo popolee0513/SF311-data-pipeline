@@ -23,6 +23,8 @@ The Data Warehouse architecture is meticulously designed with three essential la
 
 **Orchestration** is seamlessly managed using Apache Airflow, ensuring a smooth, automated data pipeline from data extraction to visualization.
 
+![Data Pipeline Architecture](https://github.com/popolee0513/SF311-data-pipeline/raw/main/Images/architecture.JPG)
+
 This project's technical focus aims to empower stakeholders with advanced Data Engineering capabilities, enabling the extraction of valuable civic insights from SF311 data. These insights are instrumental in enhancing municipal services and contributing to the well-being of the community.
 
 

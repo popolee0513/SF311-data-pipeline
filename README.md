@@ -15,7 +15,7 @@ The Data Warehouse architecture is meticulously designed with three essential la
 
 - **Raw Data Ingestion**: Utilizing BigQuery for direct interaction with the data stored in GCS, ensuring the availability of raw data.
 
-- **Data Preparation Sub-layer**: Within the Data Transformation Layer, we create staging tables for specific date ranges, preparing the data for further processing. 
+- **Data Preparation Sub-layer**: Within the Data Transformation Layer, we create staging tables for a specific date, preparing the data for further processing. 
 
 - **Data Integration Sub-layer**: After staging, data is loaded into destination tables using dbt's incremental strategy, which includes data cleaning and deduplication steps. This sub-layer ensures data quality and prepares it for aggregation.
 

@@ -42,7 +42,7 @@ For this project I decided to use the following tools:
 - Data Visualization: *`Google Looker Studio`*
 
 # Result 
-<img src="https://github.com/popolee0513/SF311-data-pipeline/raw/main/Images/SF311 Dashboard.PNG" alt="Data Pipeline Architecture" width="80%">
+<img src="https://github.com/popolee0513/SF311-data-pipeline/blob/main/Images/SF311%20Dashboard.png" alt="Data Pipeline Architecture" width="80%">
 
 
 

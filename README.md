@@ -41,5 +41,12 @@ For this project I decided to use the following tools:
 - Data Transformation: *`DBT`*
 - Data Visualization: *`Google Looker Studio`*
 
+# Result 
+<img src="https://github.com/popolee0513/SF311-data-pipeline/raw/main/Images/SF311 Dashboard.PNG" alt="Data Pipeline Architecture" width="80%">
+
+
+
+
+
 
   
